@@ -35,8 +35,6 @@ export default function Navbar() {
         className="nav-wrapper"
       >
         <div className="nav-container">
-          <div className="nav-glow" />
-          
           <div className={`nav-glass-bar ${scrolled ? 'nav-glass-bar-scrolled' : 'nav-glass-bar-default'}`}>
             {/* Logo with interactive dot */}
             <div 
@@ -63,7 +61,6 @@ export default function Navbar() {
                   className="nav-link"
                 >
                   {item.name}
-                  <span className="nav-link-underline" />
                 </a>
               ))}
               <button 

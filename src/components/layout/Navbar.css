@@ -8,12 +8,8 @@
   @apply relative overflow-hidden;
 }
 
-.nav-glow {
-  @apply absolute inset-0 bg-accent-cyan/15 opacity-0 transition-opacity duration-500;
-}
-
-.nav-container:hover .nav-glow { 
-  @apply opacity-100;
+.nav-container {
+  @apply relative overflow-hidden;
 }
 
 .nav-glass-bar {
@@ -64,14 +60,6 @@
 .nav-link {
   font-family: var(--font-mono);
   @apply relative text-[14px] uppercase tracking-[0.25em] hover:text-accent-cyan transition-colors;
-}
-
-.nav-link-underline {
-  @apply absolute -bottom-2 left-0 w-0 h-[2px] bg-accent-cyan transition-all duration-300;
-}
-
-.nav-link:hover .nav-link-underline {
-  @apply w-full;
 }
 
 .nav-cta {
