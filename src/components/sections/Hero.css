@@ -71,3 +71,12 @@
 .hero-scroll-fill {
   @apply absolute top-0 left-0 w-full bg-accent-cyan;
 }
+
+.hero-vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, transparent 0%, rgba(0, 0, 0, 0.4) 100%);
+  pointer-events: none;
+  z-index: 5;
+}
+

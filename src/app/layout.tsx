@@ -25,11 +25,13 @@ export default function RootLayout({
       >
         <FramerProvider>
           <SmoothScroll>
+            <div className="noise-overlay" />
             <Preloader />
             <Cursor />
             <Navbar />
             <main className="relative">{children}</main>
           </SmoothScroll>
+
         </FramerProvider>
       </body>
     </html>

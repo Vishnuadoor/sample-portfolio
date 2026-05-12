@@ -48,7 +48,7 @@ function Scene() {
       <group ref={groupRef} position={[2, 0, 0]}>
         <Float speed={2} rotationIntensity={1} floatIntensity={2}>
           <mesh ref={meshRef}>
-            <torusKnotGeometry args={[1, 0.35, 128, 32]} />
+            <torusKnotGeometry args={[1, 0.35, 64, 16]} />
             <meshPhysicalMaterial
               transmission={0.8}
               thickness={1.5}
@@ -79,11 +79,13 @@ export default function HeroScene() {
   return (
     <div className="absolute inset-0 z-0">
       <Canvas
-        dpr={[1, 1.5]}
+        dpr={[1, 2]} // Cap DPR at 2 for performance
         gl={{ 
           antialias: true,
           powerPreference: "high-performance",
-          alpha: true
+          alpha: true,
+          stencil: false,
+          depth: true
         }}
         camera={{ position: [0, 0, 5], fov: 50 }}
       >
@@ -92,3 +94,4 @@ export default function HeroScene() {
     </div>
   );
 }
+

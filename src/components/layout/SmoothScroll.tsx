@@ -13,7 +13,8 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
     // Performance optimization for GSAP
     gsap.config({
       force3D: true,
-      nullTargetWarn: false
+      nullTargetWarn: false,
+      units: { left: "%", top: "%", rotation: "deg" }
     });
 
     ScrollTrigger.config({
@@ -26,7 +27,8 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
     };
 
     gsap.ticker.add(update);
-    gsap.ticker.lagSmoothing(0);
+    // Standard lag smoothing is better for preventing jumps
+    gsap.ticker.lagSmoothing(500, 33);
 
     return () => {
       gsap.ticker.remove(update);
@@ -37,11 +39,11 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
     <ReactLenis
       root
       options={{
-        lerp: 0.07,
-        duration: 1.2,
+        lerp: 0.1, // Faster responsiveness
+        duration: 1, // Slightly shorter duration
         smoothWheel: true,
-        wheelMultiplier: 1.1,
-        touchMultiplier: 1.5,
+        wheelMultiplier: 1,
+        touchMultiplier: 1.2,
         infinite: false,
         syncTouch: true,
         easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), 
@@ -51,3 +53,4 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
     </ReactLenis>
   );
 }
+

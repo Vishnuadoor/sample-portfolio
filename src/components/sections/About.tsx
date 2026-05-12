@@ -26,7 +26,7 @@ export default function About() {
       <div className="about-left">
         <div className="about-image-wrapper">
           <m.div
-            style={{ y, scale }}
+            style={{ y, scale, willChange: "transform" }}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -37,9 +37,11 @@ export default function About() {
               src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000&auto=format&fit=crop"
               alt="Profile"
               fill
+              priority
               sizes="(max-width: 768px) 100vw, 50vw"
               className="about-profile-image"
             />
+
             
             <div className="about-status-badge">
               <span className="status-indicator" />

@@ -27,13 +27,14 @@
 }
 
 .selected-works-title {
-  font-size: clamp(2.5rem, 6vw, 5rem);
-  font-weight: 800;
-  line-height: 1;
-  letter-spacing: -0.02em;
-  margin-bottom: 1rem;
+  font-size: clamp(2.5rem, 6vw, 5.5rem); /* Slightly larger */
+  font-weight: 900; /* Super fat */
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  margin-bottom: 1.5rem;
   text-transform: uppercase;
 }
+
 
 .selected-works-subtitle {
   font-size: clamp(1rem, 1.2vw, 1.25rem);
@@ -138,11 +139,13 @@
 }
 
 .work-title {
-  font-size: 1.75rem;
-  font-weight: 700;
+  font-size: 1.85rem;
+  font-weight: 800;
   color: white;
   margin-bottom: 8px;
+  letter-spacing: -0.02em;
 }
+
 
 .work-desc {
   font-size: 1rem;

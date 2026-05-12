@@ -78,16 +78,25 @@ export default function SelectedWorks() {
           invalidateOnRefresh: true,
           anticipatePin: 1,
           refreshPriority: 1,
+          fastScrollEnd: true,
           onUpdate: (self) => {
-            gsap.set("#works-progress", { scaleX: self.progress });
+            gsap.set("#works-progress", { scaleX: self.progress, force3D: true });
           }
         }
       });
 
-      // Refresh on resize
-      const observer = new ResizeObserver(() => ScrollTrigger.refresh());
+      // Throttled refresh instead of raw ResizeObserver
+      let timeout: NodeJS.Timeout;
+      const observer = new ResizeObserver(() => {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => ScrollTrigger.refresh(), 200);
+      });
       observer.observe(scrollContainer);
-      return () => observer.disconnect();
+      return () => {
+        observer.disconnect();
+        clearTimeout(timeout);
+      };
+
     }, triggerRef);
 
     const refreshGSAP = () => ScrollTrigger.refresh();

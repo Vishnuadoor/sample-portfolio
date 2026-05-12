@@ -13,14 +13,15 @@ export default function Marquee() {
     <section className="marquee-section">
       <div className="marquee-container">
         <motion.div
-          animate={{ x: [0, -1000] }}
+          animate={{ x: ['0%', '-50%'] }}
           transition={{
-            duration: 20,
+            duration: 25, // Slightly slower for elegance
             repeat: Infinity,
             ease: "linear"
           }}
           className="marquee-content"
         >
+
           {[...items, ...items].map((item, i) => (
             <div key={i} className="marquee-item">
               <span className="marquee-text">

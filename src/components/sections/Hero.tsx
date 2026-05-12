@@ -47,6 +47,7 @@ export default function Hero() {
               {"ALEX".split("").map((char, i) => (
                 <m.span
                   key={i}
+                  style={{ willChange: "transform" }}
                   initial={{ y: "100%" }}
                   animate={{ y: 0 }}
                   transition={{
@@ -60,6 +61,7 @@ export default function Hero() {
                 </m.span>
               ))}
             </m.h1>
+
           </div>
           
           <div className="overflow-hidden">
@@ -67,6 +69,7 @@ export default function Hero() {
               {"RIVERA".split("").map((char, i) => (
                 <m.span
                   key={i}
+                  style={{ willChange: "transform" }}
                   initial={{ y: "100%" }}
                   animate={{ y: 0 }}
                   transition={{
@@ -80,6 +83,7 @@ export default function Hero() {
                 </m.span>
               ))}
             </m.h1>
+
           </div>
 
           <m.h1 
@@ -138,6 +142,9 @@ export default function Hero() {
           <div className="hero-scroll-fill h-1/2" />
         </m.div>
       </div>
+      
+      <div className="hero-vignette" />
     </section>
+
   );
 }
