@@ -39,13 +39,13 @@ export default function Cursor() {
     project: {
       width: 80,
       height: 80,
-      backgroundColor: '#00f5ff',
+      backgroundColor: '#f0f0f0',
       mixBlendMode: 'normal' as const,
     },
     link: {
       width: 6,
       height: 6,
-      backgroundColor: '#00f5ff',
+      backgroundColor: '#f0f0f0',
     }
   };
 
