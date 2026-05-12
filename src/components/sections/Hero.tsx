@@ -113,10 +113,17 @@ export default function Hero() {
                 onMouseLeave={() => setCursorType('default')}
                 whileHover={{ scale: 1.05, y: -5 }}
                 whileTap={{ scale: 0.95 }}
+                onClick={() => {
+                  const worksSection = document.getElementById('featured-work');
+                  if (worksSection) {
+                    worksSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
                 className="hero-btn-primary"
               >
                 View Work
               </m.button>
+
               <m.button
                 type="button"
                 suppressHydrationWarning
@@ -124,10 +131,17 @@ export default function Hero() {
                 onMouseLeave={() => setCursorType('default')}
                 whileHover={{ scale: 1.05, y: -5 }}
                 whileTap={{ scale: 0.95 }}
+                onClick={() => {
+                  const contactSection = document.getElementById('contact');
+                  if (contactSection) {
+                    contactSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
                 className="hero-btn-secondary"
               >
                 Let's Talk
               </m.button>
+
             </div>
           </m.div>
         </m.div>
