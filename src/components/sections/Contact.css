@@ -322,44 +322,55 @@
 
 /* Footer */
 .design-footer {
-  margin-top: 60px;
-  padding: 40px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  margin-top: 120px;
+  padding: 100px 0 60px;
+  position: relative;
+  width: 100%;
 }
 
 .footer-top {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 30px;
+  gap: 60px;
 }
 
 .footer-logo {
-  font-size: 2rem;
+  font-size: clamp(3rem, 12vw, 8rem);
   font-family: var(--font-display);
-  font-weight: 800;
-  letter-spacing: -0.02em;
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 1;
+  text-align: center;
 }
 
 .footer-links {
   display: flex;
   gap: 40px;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.9rem;
   font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
 .footer-links span {
   cursor: pointer;
-  transition: color 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .footer-links span:hover {
-  color: #c084fc;
+  color: #fff;
+  transform: translateY(-2px);
 }
 
 .copyright {
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.3);
+  margin-top: 20px;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.2);
+  letter-spacing: 0.05em;
 }
 
 /* Responsive */
