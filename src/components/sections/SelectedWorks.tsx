@@ -74,7 +74,7 @@ export default function SelectedWorks() {
           end: () => `+=${Math.abs(getScrollAmount())}`,
           pin: true,
           pinSpacing: true,
-          scrub: 1,
+          scrub: 0.5, // Faster tracking
           invalidateOnRefresh: true,
           anticipatePin: 1,
           refreshPriority: 1,
@@ -126,12 +126,14 @@ export default function SelectedWorks() {
                 <div className="work-card-inner">
                   <div className="work-image-wrapper">
                     <Image
-                      src={`${work.image}?q=80&w=1000&auto=format&fit=crop`}
+                      src={`${work.image}?q=75&w=1000&auto=format&fit=crop`}
                       alt={work.title}
                       fill
                       className="work-image"
                       sizes="(max-width: 768px) 100vw, 50vw"
+                      priority={i < 2} // Preload first two cards
                     />
+
                     <div className="work-overlay">
                       <span className="work-year">{work.year}</span>
                     </div>

@@ -19,7 +19,8 @@ export default function Preloader() {
         }
         return prev + 1;
       });
-    }, 20);
+    }, 10);
+
 
     return () => clearInterval(timer);
   }, [setLoaded]);
@@ -31,7 +32,8 @@ export default function Preloader() {
           className="preloader-overlay"
           exit={{
             clipPath: 'inset(0 0 100% 0)',
-            transition: { duration: 0.8, ease: "easeInOut" }
+            transition: { duration: 0.6, ease: [0.76, 0, 0.24, 1] }
+
           }}
         >
           <div className="preloader-content">

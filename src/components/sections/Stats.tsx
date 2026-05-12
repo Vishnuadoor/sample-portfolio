@@ -1,7 +1,8 @@
 'use client';
 
 import { useEffect, useState, useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
+import { m, useInView } from 'framer-motion';
+
 import './Stats.css';
 
 const stats = [
@@ -45,7 +46,8 @@ export default function Stats() {
     <section id="stats" className="stats-section">
       <div className="stats-container">
         {stats.map((stat, i) => (
-          <motion.div
+          <m.div
+
             key={i}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -60,8 +62,9 @@ export default function Stats() {
             <span className="stat-label">
               {stat.label}
             </span>
-          </motion.div>
+          </m.div>
         ))}
+
       </div>
 
       {/* Background elements */}

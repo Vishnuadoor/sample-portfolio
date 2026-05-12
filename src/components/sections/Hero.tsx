@@ -1,7 +1,7 @@
 'use client';
 
 import { m, Variants } from 'framer-motion';
-import HeroScene from '../three/HeroScene';
+
 import { useStore } from '@/lib/store';
 import './Hero.css';
 
@@ -25,17 +25,19 @@ export default function Hero() {
       y: 0,
       opacity: 1,
       transition: { 
-        duration: 0.8, 
+        duration: 0.6, 
         ease: [0.22, 1, 0.36, 1],
       },
     },
+
   };
 
   return (
     <section id="home" className="hero-section">
-      <HeroScene />
+      <div className="hero-bg-glow" />
       
       <div className="hero-container">
+
         <m.div
           variants={containerVariants}
           initial="hidden"
@@ -51,8 +53,8 @@ export default function Hero() {
                   initial={{ y: "100%" }}
                   animate={{ y: 0 }}
                   transition={{
-                    duration: 1,
-                    delay: 0.5 + i * 0.1,
+                    duration: 0.6,
+                    delay: 0.3 + i * 0.05,
                     ease: [0.22, 1, 0.36, 1]
                   }}
                   className="inline-block"
@@ -73,8 +75,8 @@ export default function Hero() {
                   initial={{ y: "100%" }}
                   animate={{ y: 0 }}
                   transition={{
-                    duration: 1,
-                    delay: 0.8 + i * 0.1,
+                    duration: 0.6,
+                    delay: 0.5 + i * 0.05,
                     ease: [0.22, 1, 0.36, 1]
                   }}
                   className="inline-block"
@@ -97,9 +99,10 @@ export default function Hero() {
             <m.p 
               initial={{ opacity: 0 }}
               animate={{ opacity: 0.4 }}
-              transition={{ delay: 1.5, duration: 1 }}
+              transition={{ delay: 1, duration: 0.8 }}
               className="hero-meta-text"
             >
+
               Visual Designer · Motion Artist · Pixel Perfectionist
             </m.p>
             <div className="flex flex-col md:flex-row gap-6 items-center">

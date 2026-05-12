@@ -12,7 +12,7 @@ import {
   Camera, 
   Link
 } from 'lucide-react';
-import ContactParticles from '../three/ContactParticles';
+
 import { useStore } from '@/lib/store';
 import './Contact.css';
 
@@ -51,9 +51,9 @@ export default function Contact() {
 
   return (
     <section id="contact" className="contact-section">
-      <ContactParticles />
       
       <div className="contact-main-container">
+
         {/* Design Header */}
         <div className="contact-design-header">
           <m.h2 

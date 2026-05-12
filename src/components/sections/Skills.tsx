@@ -1,6 +1,7 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
+
 import './Skills.css';
 
 const circularSkills = [
@@ -35,7 +36,8 @@ export default function Skills() {
                   className="skill-circle-bg"
                   strokeWidth="8"
                 />
-                <motion.circle
+                <m.circle
+
                   cx="50%"
                   cy="50%"
                   r="45%"
@@ -47,6 +49,7 @@ export default function Skills() {
                   transition={{ duration: 2, ease: "easeOut" }}
                   viewport={{ once: true }}
                 />
+
               </svg>
               <div className="absolute inset-0 flex flex-col items-center justify-center">
                 <span className="skill-percent-text">{skill.value}%</span>
@@ -68,18 +71,22 @@ export default function Skills() {
               <span className="horizontal-skill-percent">{skill.value}%</span>
             </div>
             <div className="progress-bar-bg">
-              <motion.div
+              <m.div
+
                 initial={{ scaleX: 0 }}
                 whileInView={{ scaleX: skill.value / 100 }}
                 transition={{ duration: 1.5, ease: "circOut", delay: i * 0.1 }}
                 viewport={{ once: true }}
                 className="progress-bar-fill"
               />
-              <motion.div
+
+              <m.div
+
                 animate={{ x: ['-100%', '200%'] }}
                 transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
                 className="progress-bar-shimmer"
               />
+
             </div>
           </div>
         ))}

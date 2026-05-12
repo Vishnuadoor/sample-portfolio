@@ -1,6 +1,7 @@
 'use client';
 
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { m, useScroll, useTransform } from 'framer-motion';
+
 import { useRef } from 'react';
 import './VideoReel.css';
 
@@ -17,10 +18,11 @@ export default function VideoReel() {
   return (
     <section id="reel" ref={containerRef} className="video-reel-section">
       <div className="video-sticky-wrapper">
-        <motion.div 
-          style={{ scale, opacity }}
+        <m.div 
+          style={{ scale, opacity, willChange: "transform" }}
           className="reel-video-container"
         >
+
           <video
             autoPlay
             muted
@@ -35,13 +37,14 @@ export default function VideoReel() {
           <div className="reel-gradient" />
           
           <div className="reel-title-container">
-            <motion.h2 
+            <m.h2 
               initial={{ y: 50, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               className="reel-main-title"
             >
               THE REEL
-            </motion.h2>
+            </m.h2>
+
           </div>
           
           <div className="reel-footer">
@@ -53,7 +56,8 @@ export default function VideoReel() {
               Watch Full Reel
             </button>
           </div>
-        </motion.div>
+        </m.div>
+
       </div>
     </section>
   );

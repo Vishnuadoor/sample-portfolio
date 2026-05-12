@@ -109,11 +109,13 @@ section {
 }
 
 .gpu {
-  transform: translateZ(0);
+  transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
   perspective: 1000px;
-  will-change: transform;
+  transform-style: preserve-3d;
+  will-change: transform, opacity;
 }
+
 
 .glass {
   background: var(--glass-bg);
@@ -140,6 +142,11 @@ section {
   font-family: var(--font-body);
   font-weight: var(--weight-body);
 }
+
+.fast-transition {
+  transition: all 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
 
 
 .clip-path-polygon {

@@ -44,9 +44,10 @@ export default function Gallery() {
             >
               <div className="relative w-full h-[120%] overflow-hidden">
                 <m.div 
-                  style={{ y }}
+                  style={{ y, willChange: "transform" }}
                   className="w-full h-full"
                 >
+
                   <Image
                     src={`${img.url}?q=80&w=1200&auto=format&fit=crop`}
                     alt="Gallery Item"
