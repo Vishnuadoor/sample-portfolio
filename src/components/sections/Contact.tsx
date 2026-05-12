@@ -262,7 +262,8 @@ export default function Contact() {
             <span>Dribbble</span>
             <span>LinkedIn</span>
           </div>
-          <p className="copyright">© 2024 DESIGNER.STUDIO. Crafted for the digital void.</p>
+          <p className="copyright">© 2026 DESIGNER.STUDIO. Crafted for the digital void.</p>
+
         </div>
       </footer>
     </section>

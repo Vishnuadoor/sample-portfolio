@@ -14,7 +14,7 @@ const works = [
     title: 'Aura Bloom',
     category: 'Brand Identity',
     image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe',
-    year: '2024',
+    year: '2026',
     desc: 'Digital identity for a boutique floral studio.'
   },
   {
@@ -28,7 +28,7 @@ const works = [
     title: 'Ethereal Motion',
     category: 'Motion Design',
     image: 'https://images.unsplash.com/photo-1614850523296-d8c1af93d400',
-    year: '2024',
+    year: '2026',
     desc: 'Cinematic brand reveal for a tech startup.'
   },
   {
@@ -42,7 +42,7 @@ const works = [
     title: 'Cyber System',
     category: 'UI/UX Design',
     image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085',
-    year: '2024',
+    year: '2026',
     desc: 'Design system for a decentralized finance platform.'
   }
 ];

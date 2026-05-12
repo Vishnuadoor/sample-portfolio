@@ -49,7 +49,8 @@ export default function VideoReel() {
           
           <div className="reel-footer">
             <div className="reel-footer-info">
-              <span className="reel-label">Creative Showcase 2024</span>
+              <span className="reel-label">Creative Showcase 2026</span>
+
               <h3 className="reel-footer-title">Motion Fidelity</h3>
             </div>
             <button type="button" suppressHydrationWarning className="reel-watch-btn">
