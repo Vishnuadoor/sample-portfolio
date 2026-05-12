@@ -1,0 +1,26 @@
+@reference "../../app/globals.css";
+
+.marquee-section {
+  @apply py-12 border-y border-white/5 bg-[#0d0d0f] overflow-hidden;
+}
+
+.marquee-container {
+  @apply flex whitespace-nowrap;
+}
+
+.marquee-content {
+  @apply flex gap-12 items-center px-12;
+}
+
+.marquee-item {
+  @apply flex items-center gap-12;
+}
+
+.marquee-text {
+  font-family: var(--font-display);
+  @apply text-4xl md:text-6xl font-bold opacity-30 hover:opacity-100 transition-opacity hover:text-accent-cyan cursor-default;
+}
+
+.marquee-star {
+  @apply fill-accent-cyan;
+}

@@ -1,0 +1,83 @@
+@reference "../../app/globals.css";
+
+.about-section {
+  @apply relative min-h-screen container mx-auto px-6 py-24 flex flex-col md:flex-row gap-20;
+}
+
+.about-left {
+  @apply md:w-1/2 md:sticky md:top-24 h-fit;
+}
+
+.about-image-wrapper {
+  @apply relative;
+}
+
+.about-image-container {
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 85% 100%, 0 100%);
+  @apply aspect-[4/5] relative overflow-hidden rounded-2xl;
+}
+
+.about-image-overlay {
+  @apply absolute inset-0 bg-accent-cyan/20 z-10 mix-blend-color transition-colors duration-500;
+}
+
+.about-image-wrapper:hover .about-image-overlay {
+  @apply bg-transparent;
+}
+
+.about-profile-image {
+  @apply object-cover grayscale transition-all duration-700;
+}
+
+.about-image-wrapper:hover .about-profile-image {
+  @apply grayscale-0 scale-110;
+}
+
+.about-status-badge {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  @apply absolute top-6 left-6 z-20 px-4 py-2 rounded-full flex items-center gap-2;
+}
+
+.status-indicator {
+  @apply w-2 h-2 rounded-full bg-green-500 animate-pulse;
+}
+
+.status-text {
+  font-family: var(--font-mono);
+  @apply text-[10px] uppercase tracking-tighter;
+}
+
+.about-blob {
+  @apply absolute -top-20 -right-20 w-64 h-64 bg-accent-cyan/10 blur-[100px] rounded-full -z-10;
+}
+
+.about-right {
+  @apply md:w-1/2 flex flex-col gap-12;
+}
+
+.about-title {
+  font-family: var(--font-display);
+  @apply text-4xl md:text-6xl font-bold leading-tight mb-8;
+}
+
+.about-description {
+  font-family: var(--font-body);
+  @apply text-xl opacity-70 leading-relaxed max-w-xl;
+}
+
+.about-skills-wrapper {
+  @apply flex flex-wrap gap-3;
+}
+
+.skill-tag {
+  font-family: var(--font-mono);
+  @apply px-6 py-2 rounded-full border border-white/10 text-xs uppercase tracking-widest 
+         hover:border-accent-cyan hover:bg-accent-cyan/5 transition-colors cursor-default;
+}
+
+.grid-background {
+  @apply absolute inset-0 -z-20 opacity-[0.03] pointer-events-none;
+}

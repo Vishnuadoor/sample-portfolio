@@ -1,0 +1,31 @@
+@reference "../../app/globals.css";
+
+.clients-section {
+  @apply py-24 border-y border-white/5 bg-[#0d0d0f]/50;
+}
+
+.clients-container {
+  @apply container mx-auto px-6;
+}
+
+.clients-label {
+  font-family: var(--font-mono);
+  @apply text-center text-[10px] uppercase tracking-[0.5em] text-white/30 mb-16;
+}
+
+.clients-grid {
+  @apply grid grid-cols-2 md:grid-cols-4 gap-x-12 gap-y-20;
+}
+
+.client-item {
+  @apply flex items-center justify-center grayscale opacity-30 hover:grayscale-0 transition-all cursor-pointer;
+}
+
+.client-name {
+  font-family: var(--font-display);
+  @apply text-2xl md:text-4xl font-bold transition-colors;
+}
+
+.client-item:hover .client-name {
+  @apply text-accent-cyan;
+}

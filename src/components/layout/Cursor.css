@@ -1,0 +1,10 @@
+@reference "../../app/globals.css";
+
+.custom-cursor {
+  font-family: var(--font-mono);
+  @apply fixed top-0 left-0 rounded-full pointer-events-none z-[9999] flex items-center justify-center text-[10px] font-bold text-black;
+}
+
+.cursor-view-text {
+  @apply text-black;
+}

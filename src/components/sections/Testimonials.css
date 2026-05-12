@@ -1,0 +1,70 @@
+@reference "../../app/globals.css";
+
+.testimonials-section {
+  @apply py-24 bg-background relative overflow-hidden flex items-center justify-center min-h-screen z-20;
+}
+
+.testimonials-container {
+  @apply container mx-auto px-6 relative;
+}
+
+.testimonial-wrapper {
+  @apply max-w-4xl mx-auto relative h-[400px];
+}
+
+.testimonial-card {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  @apply p-16 md:p-20 rounded-[40px] text-center flex flex-col items-center justify-center h-full relative;
+}
+
+.quote-mark {
+  font-family: var(--font-display);
+  @apply text-9xl text-accent-cyan opacity-10 absolute top-10 left-10 select-none;
+}
+
+.testimonial-quote {
+  font-family: var(--font-body);
+  @apply text-2xl md:text-4xl italic leading-tight mb-12 relative z-10;
+}
+
+.testimonial-author {
+  font-family: var(--font-display);
+  @apply text-xl font-bold;
+}
+
+.testimonial-meta {
+  font-family: var(--font-mono);
+  @apply text-xs uppercase tracking-widest opacity-40 mt-1;
+}
+
+.testimonial-nav {
+  @apply absolute -bottom-10 left-1/2 -translate-x-1/2 flex gap-8;
+}
+
+.nav-btn {
+  font-family: var(--font-mono);
+  @apply text-xs uppercase tracking-widest hover:text-accent-cyan transition-colors;
+}
+
+.dots-container {
+  @apply flex gap-2;
+}
+
+.dot {
+  @apply w-2 h-2 rounded-full transition-all;
+}
+
+.dot-active {
+  @apply bg-accent-cyan w-8;
+}
+
+.dot-inactive {
+  @apply bg-white/10;
+}
+
+.testimonials-glow {
+  @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-accent-cyan/5 blur-[150px] -z-10 rounded-full;
+}

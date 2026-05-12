@@ -1,0 +1,73 @@
+@reference "../../app/globals.css";
+
+.hero-section {
+  @apply relative min-h-screen flex items-center justify-center overflow-hidden bg-black;
+}
+
+.hero-container {
+  @apply container relative z-10 mx-auto px-6;
+}
+
+.hero-title-group {
+  @apply relative flex flex-col items-start justify-center text-left max-w-5xl;
+}
+
+.hero-title-text {
+  font-family: var(--font-display);
+  background: linear-gradient(to bottom, #ffffff 30%, #a5a5a5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  will-change: transform, opacity;
+  text-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+  @apply text-8xl md:text-[14rem] font-bold leading-[0.85] tracking-tighter;
+}
+
+.hero-subtitle-text {
+  font-family: var(--font-display);
+  @apply text-5xl md:text-8xl font-bold opacity-10 mt-2 uppercase tracking-tight text-left;
+}
+
+.hero-meta-group {
+  @apply mt-12 flex flex-col items-start gap-10;
+}
+
+.hero-meta-text {
+  font-family: var(--font-mono);
+  @apply text-[10px] md:text-xs opacity-40 tracking-[0.4em] uppercase;
+}
+
+.hero-btn-primary {
+  font-family: var(--font-display);
+  background: var(--accent-cyan);
+  @apply px-10 py-4 rounded-xl text-black font-bold text-xs uppercase tracking-widest 
+         transition-all duration-500 shadow-[0_0_30px_rgba(0,245,255,0.3)]
+         hover:scale-105 hover:shadow-[0_0_50px_rgba(0,245,255,0.5)] active:scale-95;
+}
+
+.hero-btn-secondary {
+  font-family: var(--font-display);
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  @apply px-10 py-4 rounded-xl text-white font-bold text-xs uppercase tracking-widest 
+         transition-all duration-500
+         hover:border-accent-cyan hover:bg-accent-cyan/10 hover:scale-105 active:scale-95;
+}
+
+.hero-scroll-indicator {
+  @apply absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4;
+}
+
+.hero-scroll-text {
+  font-family: var(--font-mono);
+  @apply text-[10px] uppercase tracking-[0.4em] opacity-30;
+}
+
+.hero-scroll-bar {
+  @apply w-[1px] h-12 bg-white/10 relative;
+}
+
+.hero-scroll-fill {
+  @apply absolute top-0 left-0 w-full bg-accent-cyan;
+}

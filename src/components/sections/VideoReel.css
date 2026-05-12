@@ -1,0 +1,82 @@
+@reference "../../app/globals.css";
+
+.video-reel-section {
+  @apply h-[150vh] relative;
+}
+
+.video-sticky-wrapper {
+  @apply sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden;
+}
+
+.reel-video-container {
+  @apply relative w-[92vw] h-[85vh] mx-auto rounded-[40px] overflow-hidden;
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.5);
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+.reel-video {
+  @apply absolute inset-0 w-full h-full object-cover;
+}
+
+.reel-gradient {
+  @apply absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60;
+}
+
+.reel-title-container {
+  @apply absolute inset-0 flex flex-col items-center justify-center text-center;
+}
+
+.reel-main-title {
+  font-family: var(--font-display);
+  @apply text-8xl md:text-[12rem] font-bold text-white mix-blend-overlay pointer-events-none;
+}
+
+.reel-footer {
+  @apply absolute bottom-12 left-12 right-12 flex justify-between items-end;
+}
+
+.reel-footer-info {
+  @apply flex flex-col gap-2;
+}
+
+.reel-label {
+  font-family: var(--font-mono);
+  @apply text-[10px] uppercase tracking-widest text-white/60;
+}
+
+.reel-footer-title {
+  font-family: var(--font-display);
+  @apply text-4xl font-bold;
+}
+
+.reel-watch-btn {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  font-family: var(--font-mono);
+  @apply px-8 py-4 rounded-full text-xs uppercase tracking-widest hover:bg-white hover:text-black transition-all;
+}
+
+@media (max-width: 768px) {
+  .reel-video-container {
+    @apply w-[95vw] h-[60vh] rounded-[30px];
+  }
+
+  .reel-main-title {
+    @apply text-5xl md:text-6xl;
+  }
+
+  .reel-footer {
+    @apply bottom-8 left-8 right-8;
+  }
+
+  .reel-footer-title {
+    @apply text-2xl;
+  }
+
+  .reel-watch-btn {
+    @apply px-6 py-3 text-[10px];
+  }
+}

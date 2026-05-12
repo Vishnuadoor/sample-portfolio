@@ -1,0 +1,22 @@
+@reference "../../app/globals.css";
+
+.preloader-overlay {
+  @apply fixed inset-0 z-[10000] flex flex-col items-center justify-center bg-[#080808];
+}
+
+.preloader-content {
+  @apply relative w-48 h-48 flex items-center justify-center;
+}
+
+.preloader-svg {
+  @apply w-full h-full stroke-accent-cyan fill-none;
+}
+
+.preloader-percentage {
+  font-family: var(--font-mono);
+  @apply absolute bottom-0 right-0 p-8 text-xs;
+}
+
+.preloader-bar {
+  @apply absolute top-0 left-0 h-[1px] bg-accent-cyan;
+}

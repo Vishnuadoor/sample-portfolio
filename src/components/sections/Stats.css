@@ -1,0 +1,35 @@
+@reference "../../app/globals.css";
+
+.stats-section {
+  @apply py-24 bg-background relative overflow-hidden z-20;
+}
+
+.stats-container {
+  @apply container mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-12 text-center;
+}
+
+.stat-item {
+  @apply flex flex-col items-center;
+}
+
+.stat-value {
+  font-family: var(--font-display);
+  @apply text-6xl md:text-8xl font-bold text-accent-cyan mb-2;
+}
+
+.stat-suffix {
+  @apply text-white/20;
+}
+
+.stat-label {
+  font-family: var(--font-mono);
+  @apply text-[10px] uppercase tracking-[0.3em] text-white/40;
+}
+
+.stats-overlay {
+  @apply absolute inset-0 opacity-[0.02] pointer-events-none select-none overflow-hidden;
+}
+
+.stats-grid-pattern {
+  @apply absolute top-0 left-0 w-full h-full bg-[repeating-linear-gradient(0deg,transparent,transparent_1px,#fff_1px,#fff_2px)] bg-[length:100%_4px];
+}

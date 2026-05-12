@@ -1,0 +1,66 @@
+@reference "../../app/globals.css";
+
+.services-section {
+  @apply py-24 container mx-auto px-6 relative z-10 overflow-hidden;
+}
+
+.services-header {
+  @apply mb-20;
+}
+
+.services-title {
+  font-family: var(--font-display);
+  @apply text-6xl md:text-8xl font-bold uppercase tracking-tighter;
+}
+
+.services-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
+}
+
+.service-card {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  @apply p-10 rounded-[32px] relative overflow-hidden cursor-default transition-all duration-500;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.service-card:hover {
+  border-color: rgba(0, 245, 255, 0.3);
+  box-shadow: 0 10px 40px rgba(0, 245, 255, 0.05);
+}
+
+.service-card-content {
+  @apply relative z-10;
+}
+
+.service-icon {
+  @apply w-10 h-10 mb-6 text-accent-cyan transition-transform;
+}
+
+.service-card:hover .service-icon {
+  @apply scale-110;
+}
+
+.service-title {
+  font-family: var(--font-display);
+  @apply text-2xl font-bold mb-4;
+}
+
+.service-desc {
+  font-family: var(--font-body);
+  @apply text-base opacity-70 leading-relaxed;
+}
+
+.service-hover-glow {
+  @apply absolute inset-0 bg-gradient-to-br from-accent-cyan/5 to-transparent opacity-0 transition-opacity;
+}
+
+.service-card:hover .service-hover-glow {
+  @apply opacity-100;
+}
+
+.services-blob {
+  @apply absolute bottom-0 left-0 w-[500px] h-[500px] bg-accent-amber/5 blur-[150px] -z-10 rounded-full;
+}
